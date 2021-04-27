@@ -10,7 +10,7 @@ class CategorySerializer(serializers.ModelSerializer):
 
 
 class ProductSerializer(serializers.ModelSerializer):
-    category = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+    # category = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
     class Meta:
         model = Product
@@ -18,7 +18,7 @@ class ProductSerializer(serializers.ModelSerializer):
 
 
 class BookSerializer(serializers.ModelSerializer):
-    category = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+    # category = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
     class Meta:
         model = Book

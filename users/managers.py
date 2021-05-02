@@ -22,11 +22,11 @@ class CustomUserManager(BaseUserManager):
         """
             Create admin user with specified email and passsword
         """
-        extra_fields.setdefaults('is_staff', True)
-        extra_fields.setdefaults('is_superuser', True)
-        extra_fields.setdefaults('is_active', True)
+        extra_fields.setdefault('is_staff', True)
+        extra_fields.setdefault('is_superuser', True)
+        extra_fields.setdefault('is_active', True)
 
-        if extra_fields.get('is_satff') is not True:
+        if extra_fields.get('is_staff') is not True:
             raise ValueError(_('superuser must have is_staff=True'))
         if extra_fields.get('is_superuser') is not True:
             raise ValueError(_('superuser must have is_superuser=True'))
